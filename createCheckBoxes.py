@@ -11,6 +11,7 @@ import tkinter as tk
 def createCheckBoxes(expanions, chk_vars, root):
     # Creates the checkboxes
     for option in expanions:
+        chk_vars.append(var)
         chk = tk.Checkbutton(root, text=option, onvalue=1, offvalue=0, variable=var) #Option is the name of the expansion
         #print(chk.select())
         chk.pack(anchor=tk.W)
