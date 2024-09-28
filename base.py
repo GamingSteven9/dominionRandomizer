@@ -6,6 +6,7 @@ from getCards import getCards
 from generateKingdom import generateKingdom
 from updateTextBox import updateTextBox
 from createCheckBoxes import createCheckBoxes
+from getExpansions import getExpansions
 
 cards = {}
 
@@ -28,16 +29,8 @@ t_box = tk.Text(root, height=12, width=40)
 t_box.pack(expand=True)
 
 createCheckBoxes(expanions, chk_vars, root) # Creates the checkboxes
-
-def getExpansions():
-    selected_Expansions = [var.get() for var in chk_vars]
-    kingdom = generateKingdom(cards) # Generates the kingdom
-    updateTextBox(t_box, kingdom) # Updates the textbox to display the generated kingdom
-
-    print(selected_Expansions)
-
     
-getKingdom = tk.Button(root, text="Generate Kingdom", command=getExpansions)
+getKingdom = tk.Button(root, text="Generate Kingdom", command=(lambda: getExpansions(chk_vars, cards, t_box))) #Button that generates the kingdom
 getKingdom.pack()
 
 root.mainloop()
