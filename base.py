@@ -20,8 +20,10 @@ generatedKingdom = tk.Label(root, text="Generated Kingdom")
 expanions = ["Base", "Base 2e", "Intrigue", "Intrigue 2e", "Seaside", "Seaside 2e", "Alchemy", "Prosperity", "Prosperity 2e", "Cornucopia", "Cornucopia 2e", "Hinterlands", "Hinterlands 2e", "Dark Ages", "Guilds", "Guilds 2e",
              "Adventures", "Empires", "Nocturne", "Renaissance", "Menagerie", "Allies", "Plunder", "Rising Sun", "Promos"]
 
-connection = create_connection("expansions\\base1.db") # Creates connection to sqlite database
-cards = getCards(connection, cards) # Gets name of cards from database
+connectionBase2E = create_connection("expansions\\Base2E.db") # Creates connection to sqlite database
+connectionBase = create_connection("expansions\\Base.db")
+
+cards = getCards(connectionBase2E, cards) # Gets name of cards from database
 
 chk_vars = [] # Create a list for the checkbox variables
 
