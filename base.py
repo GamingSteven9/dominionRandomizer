@@ -16,7 +16,7 @@ generatedKingdom = tk.Label(root, text="Generated Kingdom")
 expansions = ["Base", "Base2E", "Intrigue", "Intrigue2E", "Seaside", "Seaside2E", "Alchemy", "Prosperity", "Prosperity2E", "Cornucopia", "Cornucopia2E", "Hinterlands", "Hinterlands2E", "Dark_Ages", "Guilds", "Guilds2E",
              "Adventures", "Empires", "Nocturne", "Renaissance", "Menagerie", "Allies", "Plunder", "Rising_Sun", "Promos"] # List with the names of the expansions
 
-t_box = tk.Text(root, height=12, width=40) # Creates the textbox used to display the generated kingdom
+t_box = tk.Text(root, height=10, width=100) # Creates the textbox used to display the generated kingdom
 t_box.pack(expand=True)
 
 createCheckBoxes(expansions, chk_vars, root) # Creates the checkboxes
