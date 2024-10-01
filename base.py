@@ -10,6 +10,7 @@ from getExpansions import getExpansions
 
 cards = {}
 
+
 # Creates the window for the applications
 root = tk.Tk()
 root.title("Dominion Randomizer")
@@ -17,13 +18,12 @@ root.geometry("1000x1000")
 
 generatedKingdom = tk.Label(root, text="Generated Kingdom")
 
-expanions = ["Base", "Base 2e", "Intrigue", "Intrigue 2e", "Seaside", "Seaside 2e", "Alchemy", "Prosperity", "Prosperity 2e", "Cornucopia", "Cornucopia 2e", "Hinterlands", "Hinterlands 2e", "Dark Ages", "Guilds", "Guilds 2e",
+expanions = ["Base", "Base2E", "Intrigue", "Intrigue2E", "Seaside", "Seaside2E", "Alchemy", "Prosperity", "Prosperity2E", "Cornucopia", "Cornucopia2E", "Hinterlands", "Hinterlands2E", "Dark Ages", "Guilds", "Guilds2E",
              "Adventures", "Empires", "Nocturne", "Renaissance", "Menagerie", "Allies", "Plunder", "Rising Sun", "Promos"]
 
-connectionBase2E = create_connection("expansions\\Base2E.db") # Creates connection to sqlite database
-connectionBase = create_connection("expansions\\Base.db")
+connection = create_connection("expansions\\expansions.db")
 
-cards = getCards(connectionBase2E, cards) # Gets name of cards from database
+cards = getCards(connection, cards) # Gets name of cards from database
 
 chk_vars = [] # Create a list for the checkbox variables
 
