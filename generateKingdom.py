@@ -12,5 +12,4 @@ def generateKingdom(chk_vars, t_box):
     selectedExpansions = getExpansions(chk_vars) # Gets the selected expansions
     cards = getCards(connection, cards, selectedExpansions) # Gets name of cards from the chosen expansions
     kingdom = sample(sorted(cards), k=10) # Choses 10 randomly selected cards from the given cards
-    updateTextBox(t_box, kingdom) # Updates the textbox to display the generated kingdom
-    return None
+    return kingdom

@@ -2,6 +2,7 @@ import tkinter as tk
 
 from generateKingdom import generateKingdom
 from createCheckBoxes import createCheckBoxes
+from updateTextBox import updateTextBox
 
 chk_vars = [] # Create a list for the checkbox variables
 
@@ -20,7 +21,7 @@ t_box.pack(expand=True)
 
 createCheckBoxes(expansions, chk_vars, root) # Creates the checkboxes
     
-getKingdom = tk.Button(root, text="Generate Kingdom", command=(lambda: generateKingdom(chk_vars, t_box))) # Button that generates the kingdom
+getKingdom = tk.Button(root, text="Generate Kingdom", command=(lambda: updateTextBox(t_box, generateKingdom(chk_vars, t_box)))) # Button that displays the generated kingdom in the textbox
 getKingdom.pack()
 
 root.mainloop()
