@@ -81,10 +81,6 @@ def getCards(con, c, selectedExpansions):
                 rows = rows + cur.fetchall()
     #print(rows)
     for row in rows:
-        match row[3]: # Adds the second card type if the given card has two
-            case None:
-                c[row[0]] = [row[1], row[2]]
-            case _:
-                c[row[0]] = [row[1], row[2], row[3]]
+        c[row[0]] = [row[1], row[2]]
     #print(c)
     return c
